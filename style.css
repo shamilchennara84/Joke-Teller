@@ -3,3 +3,64 @@
 html {
   box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #45badd;
+}
+
+.container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('robot.gif');
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+button{
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+  height: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  color: white;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px #999;
+}
+
+button:hover{
+  background: linear-gradient(135deg, #ee5a6f, #ff6b6b);
+}
+
+button:active{
+  background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+button:disabled{
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .container {
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .button{
+      box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+    }
+}
+
